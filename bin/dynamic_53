@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.expand_path("../../lib", __FILE__))
+require 'dynamic_53'
+require 'dynamic_53/cli'
+
+Dynamic53::CLI.new(ARGV).run

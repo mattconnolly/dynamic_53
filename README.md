@@ -1,6 +1,12 @@
 # Dynamic53
 
-TODO: Write a gem description
+A simple tool to update Amazon Route 53 with based on your current IP Address.
+
+Requirements:
+
+* An amazon account with a zone created in route 53.
+* AWS credentials with access to update Route 53.
+* Access to internet. :)
 
 ## Installation
 
@@ -18,7 +24,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the command as following:
+
+    $ dynamic_53 -z example.com. -h dynamic.example.com.
+
+This will update the host "dynamic.example.com." within the route 53 zone "example.com." with you current IP address.
 
 ## Development
 

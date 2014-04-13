@@ -1,3 +1,3 @@
-module Dynamic53
+class Dynamic53
   VERSION = "0.0.1"
 end
