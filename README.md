@@ -30,6 +30,10 @@ Run the command as following:
 
 This will update the host "dynamic.example.com." within the route 53 zone "example.com." with you current IP address.
 
+Note that AWS credentials are expected to be provided in the environment variables `AWS_ACCESS_KEY_ID` and
+`AWS_SECRET_ACCESS_KEY`. Refer to Amazon Web Services console to create a user with the credentials to make updates
+in Route 53.
+
 ## Development
 
 Use `rake` to run tests.
