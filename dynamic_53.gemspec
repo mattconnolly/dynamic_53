@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["matt.connolly@me.com"]
   spec.summary       = %q{A simple tool to update Amazon Route 53 with based on your current IP Address.}
   spec.description   = %q{A simple tool to update Amazon Route 53 with based on your current IP Address.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/mattconnolly/dynamic_53"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
