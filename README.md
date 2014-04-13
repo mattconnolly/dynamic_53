@@ -24,15 +24,37 @@ Or install it yourself as:
 
 ## Usage
 
+Note that AWS credentials are expected to be provided in the environment variables `AWS_ACCESS_KEY_ID` and
+`AWS_SECRET_ACCESS_KEY`. Refer to Amazon Web Services console to create a user with the credentials to make updates
+in Route 53.
+
+### Command line
+
 Run the command as following:
 
     $ dynamic_53 -z example.com. -h dynamic.example.com.
 
 This will update the host "dynamic.example.com." within the route 53 zone "example.com." with you current IP address.
 
-Note that AWS credentials are expected to be provided in the environment variables `AWS_ACCESS_KEY_ID` and
-`AWS_SECRET_ACCESS_KEY`. Refer to Amazon Web Services console to create a user with the credentials to make updates
-in Route 53.
+    $ dynamic_53 --help
+
+For command line options.
+
+The task can be set up in a crontab like so, to update hourly:
+
+```
+1 * * * * AWS_SECRET_ACCESS_KEY=secret AWS_ACCESS_KEY_ID=key /path/to/bin/dynamic_53 -z example.com. -h hostname.example.com.
+```
+
+After installing the gem do `which dynamic_53` to get its full path.
+
+### From ruby
+
+```ruby
+options = {verbose: false}
+client = Dynamic53.new(zone, hostname, options)
+client.update # => updates the above zone and hostname with the current machine's public IP address.
+```
 
 ## Development
 
