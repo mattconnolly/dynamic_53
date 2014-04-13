@@ -20,6 +20,10 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Development
+
+Use `rake` to run tests.
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/dynamic_53/fork )
